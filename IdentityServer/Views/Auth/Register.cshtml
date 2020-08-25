@@ -1,0 +1,21 @@
+﻿@model RegisterViewModel
+
+    <form asp-controller="Auth" asp-action="Register" method="post">
+        <div>
+            <label>User Name</label>
+            <input asp-for="UserName" />
+        </div>
+        <div>
+            <label>PassWord</label>
+            <input asp-for="Password" />
+        </div>
+        <div>
+            <p>It is not true ,just for simplification</p>
+            <label>Role Name</label>
+            <input asp-for="RoleName" />
+        </div>
+        <div>
+            <button type="submit">Register</button>
+        </div>
+        <label style="color:red;">@ViewBag.Error</label>
+    </form>

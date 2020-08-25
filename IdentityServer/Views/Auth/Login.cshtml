@@ -1,0 +1,18 @@
+﻿@model LoginViewModel
+
+    <form asp-controller="Auth" asp-action="Login" method="post">
+        <input type="hidden" asp-for="ReturnUrl" />
+        <div>
+            <label>User Name</label>
+            <input asp-for="UserName" />
+        </div>
+        <div>
+            <label>PassWord</label>
+            <input asp-for="Password" />
+        </div>
+        <div>
+            <button type="submit">SignIn</button>
+            <a href="/Auth/Register">Register</a>
+        </div>
+        <label style="color:red;">@ViewBag.Error</label>
+    </form>
